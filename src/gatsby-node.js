@@ -9,6 +9,7 @@ export const sourceNodes = async (gatsbyContext, pluginOptions) => {
   const {
     repositoryName,
     accessToken,
+    variationRef = null,
     linkResolver = () => {},
     htmlSerializer = () => {},
     fetchLinks = [],
@@ -22,6 +23,7 @@ export const sourceNodes = async (gatsbyContext, pluginOptions) => {
     accessToken,
     fetchLinks,
     lang,
+    variationRef,
   })
 
   await createTemporaryMockNodes({

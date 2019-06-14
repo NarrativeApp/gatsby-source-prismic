@@ -148,6 +148,7 @@ import them into your `gatsby-config.js` file.
 plugins: [
   {
     resolve: 'gatsby-source-prismic',
+    variationRef: '1234',
     options: {
       // ...
       schemas: {
