@@ -14,6 +14,7 @@ const baseValidations = {
   accessToken: yupString()
     .nullable()
     .required(),
+  variationRef: yupString().nullable(),
   linkResolver: yupMixed()
     .test('is function', '${path} is not a function', RA.isFunction)
     .default(() => RA.noop),

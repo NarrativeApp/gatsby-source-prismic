@@ -103,6 +103,7 @@ if they are empty in Prismic.
          options: {
            repositoryName: 'gatsby-source-prismic-test-site',
            accessToken: 'example-wou7evoh0eexuf6chooz2jai2qui9pae4tieph1sei4deiboj',
+           variationRef: '123456',
    +       schemas: {
    +         page: require('./src/schemas/page.json'),
    +         blog_post: require('./src/schemas/blog_post.json'),
