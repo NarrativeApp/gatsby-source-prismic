@@ -5,7 +5,7 @@ export default async ({
   accessToken,
   fetchLinks,
   lang,
-  variationRef,
+  variationRef: ref,
 }) => {
   console.time(`Fetch Prismic data`)
   console.log(`Starting to fetch data from Prismic`)
@@ -14,12 +14,7 @@ export default async ({
   const client = await Prismic.api(apiEndpoint, { accessToken })
 
   // Query all documents from client
-  const documents = await pagedGet(
-    client,
-    [],
-    { fetchLinks, variationRef },
-    lang,
-  )
+  const documents = await pagedGet(client, [], { fetchLinks, ref }, lang)
 
   console.timeEnd(`Fetch Prismic data`)
 
